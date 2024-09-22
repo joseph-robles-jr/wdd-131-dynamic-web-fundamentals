@@ -1,9 +1,13 @@
 body{
-    margin: 400px;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     display: grid;
     grid-template-columns: 1fr 600px 1fr;
     gap:20px;
     border: solid;
+    border-width: 1px;
     line-height: 1.5;
 
 }
