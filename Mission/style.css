@@ -1,10 +1,8 @@
 body{
-    margin: 100px;
+    margin: 400px;
     display: grid;
     grid-template-columns: 1fr 600px 1fr;
     gap:20px;
-    padding-left: 100px;
-    padding-right: 100px;
     border: solid;
     line-height: 1.5;
 
