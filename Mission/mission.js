@@ -1,4 +1,4 @@
-//i used Copilot to help me with this code but it is not copy and pasted.
+//i Iused Copilot to help me with this code but it is not copy and pasted.
 
 // Select the theme selector element
 const themeSelector = document.getElementById('themeSelector');
@@ -14,9 +14,11 @@ function changeTheme() {
 
   if (selectedTheme === 'dark') {
     body.classList.add('dark');
-    logo.src = 'white-logo.png';
+
+    logo.src = 'byui-logo_white.png'; // This is the dark mode logo
+  
   } else {
     body.classList.remove('dark');
-    logo.src = 'blue-logo.png';
+    logo.src = 'byui-logo_blue.webp'; // this is the light mode logo with the BLUE text
   }
 }

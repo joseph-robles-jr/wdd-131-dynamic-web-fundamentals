@@ -66,7 +66,7 @@ footer{
     align-items: center;
     padding-bottom: 100px;
 }
-#footer_logo{
+#logo{
     grid-column: 3;
     max-width: 100%;
     max-height: auto;
