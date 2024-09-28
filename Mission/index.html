@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="mission.js"></script>
+    <script src="mission.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -13,9 +13,9 @@
         <h1 class="main_title">MISSION STATEMENT</h1>
         <h2 class="subtitle">BRIGHAM YOUNG UNIVERSITY-IDAHO</h2>
         <hr>
-        <select onchange="changeTheme()" class="menu"> <!--Dark mode, light mode switch-->
-            <option value="light">Light Mode</option>
-            <option value="dark">Dark Mode</option>
+        <select id="themeSelector" class="menu"> <!--Dark mode, light mode switch. JS looks for the ID. Be specific in spelling.-->
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
         </select>
     </header>
 
@@ -47,8 +47,9 @@
 
 
     <footer>
-        <img id="footer_logo" src="byui-logo_blue.webp">
+        <img id="footer_logo" src="byui-logo_blue.webp" alt="BYUI logo">
     </footer>
 
 </body>
+
 </html>
