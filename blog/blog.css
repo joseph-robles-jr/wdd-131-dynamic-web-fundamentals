@@ -21,7 +21,7 @@ body{
 }
 
 nav{
-    background-color: #788AA3;
+    background-color: #56647e;
     color:#F7ECE1  ; 
 }
 
@@ -31,6 +31,9 @@ nav{
     grid-row: 1fr;
     list-style-type: none;
     font-size: 17px;
+    
+}
+#about,#archive,#search{
     color: white;
 }
 
