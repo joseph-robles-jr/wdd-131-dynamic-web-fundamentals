@@ -1,0 +1,121 @@
+/*clolor scheme:
+darc blue accent: #251F47
+light blue main: #788AA3
+cream main background: #F7ECE1 */
+
+body{
+    background-color: #F7ECE1;
+    font-family: serif;
+    
+}
+
+
+
+/* IDs */
+#title {
+    font-size: larger;
+    color: #251F47; /* dark blue*/
+    text-align: center;
+    padding: 30px;
+    
+}
+
+nav{
+    background-color: #788AA3;
+    color:#F7ECE1  ; 
+}
+
+#nav_links{
+    display:grid; 
+    grid-template-columns: 10fr 1fr 1fr 1fr;
+    grid-row: 1fr;
+    list-style-type: none;
+    font-size: 17px;
+}
+
+
+main{
+    display:grid;
+    grid-template-columns: 2;
+}
+
+#sidebar_right {
+    grid-column: 2;
+    border:2px solid 251F47;
+}
+
+#sidebar_left {
+    grid-column: 1;
+    text-align: center;
+    border-right:2px solid #251F47;
+}
+
+#main_content { 
+    padding-left: 100px;
+    grid-template-columns: 1; /*left border between sidebar left and main_content*/    
+}
+
+.book_cover{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20px;
+    height: auto;
+}
+
+/* Classes */
+#about {
+    grid-column: 2;
+}
+
+
+#archive{
+    grid-column: 3;
+}
+
+#search{
+    grid-column: 4;
+}
+
+.blog_entry {
+    background-color: #F7ECE1 ;
+    display: grid;
+    grid-template-columns: .25fr 1fr; 
+    
+}
+.skiptocontent a {
+	/* set the element to absolute positioning */
+    position:absolute;
+	/* move it off screen */
+    top:-40px;
+	/* Make sure it will be on the left edge of the screen */
+    text-align: left;
+	/* Change the background and color to something that stands out */
+    color:#788AA3;
+    background-color: white;
+
+}
+.skiptocontent a:focus {
+	/* Move it back on when focused */
+    top:0;
+}
+
+ /* .date {
+    
+}
+
+.genere {
+    
+}
+
+.book_title {
+    
+}
+
+.book_cover {
+    
+}
+
+.book_description {
+    
+} */ */
