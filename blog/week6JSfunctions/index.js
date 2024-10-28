@@ -24,8 +24,7 @@ function getGrades(inputSelector) {
   
   function clickHandler() {
     document
-    .querySelector("#submitButton")
-    .addEventListener("click", clickHandler);
+    .querySelector("#submitButton")     .addEventListener("click", clickHandler);
     // when the button in our html is clicked:
     // get the grades entered into the input
     // calculate the gpa from the grades entered

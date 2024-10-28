@@ -1,0 +1,57 @@
+
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    position: relative;
+
+}
+
+#card-front{
+    position: absolute;
+    width: 350px;
+    height: 250px;
+    background-color: #4CAF50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 16px;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+#card-back{
+    display: inline-flex;
+    position: relative;
+    z-index: 1;
+    bottom: -100px;
+    right: -100px;
+    width: 350px;
+    height: 250px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+    
+}
+ 
+#button-div{
+    grid-row: 2;
+    margin-top: 90px;
+    margin-left: 350px;
+    flex: 1 100%;
+    z-index: 2;
+}
+
+#submit{
+    flex-wrap: wrap; 
+    z-index: 2;
+}
+
+
+
+
