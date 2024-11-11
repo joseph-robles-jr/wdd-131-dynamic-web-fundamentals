@@ -80,6 +80,12 @@
     color: red;
   }
 
+  #participant{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+  }
+
 
   .columns {
     display: flex;

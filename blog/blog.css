@@ -5,8 +5,7 @@ cream main background: #F7ECE1 */
 
 body{
     background-color: #F7ECE1;
-    font-family: serif;
-    
+    font-family: serif;    
 }
 
 
@@ -17,12 +16,11 @@ body{
     color: #251F47; /* dark blue*/
     text-align: center;
     padding: 30px;
-    
 }
 
 nav{
     background-color: #56647e;
-    color:#F7ECE1  ; 
+    color:#F7ECE1; 
 }
 
 #nav_links{
@@ -33,30 +31,31 @@ nav{
     font-size: 17px;
     
 }
-#about,#archive,#search{
+#about, #archive, #search{
     color: white;
 }
 
 
 main{
     display:grid;
-    grid-template-columns: 2;
+    grid-template-columns: 1fr .5fr;
 }
 
-#sidebar_right {
+.sidebar_right {
     grid-column: 2;
-    border:2px solid 251F47;
+    border:2px solid #251F47;
 }
 
-#sidebar_left {
+.sidebar_left {
     grid-column: 1;
     text-align: center;
     border-right:2px solid #251F47;
+    padding: 10px;
 }
 
 #main_content { 
     padding-left: 100px;
-    grid-template-columns: 1; /*left border between sidebar left and main_content*/    
+    grid-template-columns: 1 ; /*left border between sidebar left and main_content*/    
 }
 
 .book_cover{
@@ -82,10 +81,22 @@ main{
     grid-column: 4;
 }
 
+.blog_entries{
+    grid-column: 1/ span 2;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+
+}
+
 .blog_entry {
+    /* display: block; */
     background-color: #F7ECE1 ;
     display: grid;
     grid-template-columns: .25fr 1fr; 
+    border-bottom: 2px solid #251f47;
+    margin: 10px 0;
+    grid-column: 1/ -1;
     
 }
 .skiptocontent a {
@@ -123,4 +134,4 @@ main{
 
 .book_description {
     
-} */ */
+} */ 
