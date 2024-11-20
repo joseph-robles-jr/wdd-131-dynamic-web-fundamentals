@@ -27,6 +27,7 @@ header img {
     border: 1px solid black;
     width: 100%;
     max-width: 300px;
+    margin-left: 100px;
 }
 
 #search-button {
@@ -36,6 +37,7 @@ header img {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
+    
 }
 
 hr {
@@ -81,8 +83,9 @@ main {
 .catagory {
     color: black;
     padding: 5px 10px;
-    border-radius: 3px;
+    border:solid 1px black;
     margin-bottom: 10px;
+    padding-right: 0;
     
 }
 
