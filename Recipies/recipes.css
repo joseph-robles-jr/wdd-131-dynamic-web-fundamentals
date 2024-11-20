@@ -21,8 +21,7 @@ header img {
 }
 
 #searchbox {
-    justify-content:  2px; ;
-
+    justify-content:  center;
     padding: 10px;
     margin-top: 10px;
     border: 1px solid black;
@@ -60,17 +59,23 @@ main {
     border-radius: 5px;
     padding: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     margin-bottom: 20px;
     width: 100%;
-    max-width: 600px;
+    height: 100%;
+    max-width: 800px;
+    max-height: 900px;
 }
 
 .content-card img {
-    width: 50%;
-    border-radius: 5px;
+    width: 100%;
+    
     margin-bottom: 10px;
+}
+
+.side-info{
+    padding: 10px;
 }
 
 .catagory {
