@@ -14,20 +14,34 @@ header {
     flex-direction: column;
     align-items: center;
     padding: 20px;
+
 }
 
 header img {
     height: 50px;
 }
 
+#logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#search{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
 #searchbox {
     justify-content:  center;
-    padding: 10px;
     margin-top: 10px;
     border: 1px solid black;
     width: 100%;
-    max-width: 300px;
-    margin-left: 100px;
+    max-width: 600px;
+    padding: 10px;
 }
 
 #search-button {
@@ -38,6 +52,10 @@ header img {
     cursor: pointer;
     margin-top: 10px;
     
+}
+
+#search-img{
+    height: 15px;
 }
 
 hr {
@@ -125,13 +143,14 @@ img {
 
 /* Media Query for Larger Screens */
 @media (min-width: 600px) {
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-    }
 
     #searchbox, #search-button {
         margin-top: 0;
+    }
+
+    #searchbox{
+        width: 100%;
+        flex: 1;
     }
 
     main {
