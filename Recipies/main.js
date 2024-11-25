@@ -13,31 +13,47 @@ function getRandomListEntry(list)
 }
 
 
+
 function recipeTemplate(recipe) {
-	return `<figure class="recipe">
-	<img src="recipes.image" alt="image of apple crisp on a plate" />
-	<figcaption>
-		<ul class="recipe__tags">
-			<li>Dessert</li>
-			<li>Fruit</li>
-		</ul>
-		<h2><a href="#">recipes.name</a></h2>
-		<p class="recipe__ratings">
-			<span
-				class="rating"
-				role="img"
-				aria-label="Rating: 3 out of 5 stars"
-			>
-				<span aria-hidden="true" class="icon-star">⭐</span>
-				<span aria-hidden="true" class="icon-star">⭐</span>
-				<span aria-hidden="true" class="icon-star">⭐</span>
-				<span aria-hidden="true" class="icon-star">⭐</span>
-				<span aria-hidden="true" class="icon-star-empty">☆</span>
-			</span>
-		</p>
-		<p class="recipe__description">
-			recipes.description
-		</p>
-</figcaption>
-</figure>`;
+return `<div class="recipe-card">
+	<img id="recipe-img" src="${recipe.image}" alt="Image of ${recipe.name}">
+	<div class="recipe-info">
+	<div class="tags">
+	${tagsTemplate(recipe.tags)}
+	</div>
+	<h2>${recipe.name}</h2>
+	<div class="rating">
+	${ratingTemplate(recipe.rating)}
+	</div>
+	<p class="description">${recipe.description}</p>
+	</div>
+	</div>`;
+}
+
+
+function tagsTemplate(tags) {
+	// loop through the tags list and transform the strings to HTML
+	{
+		return tags.map(tag => `<span class= "tag"> ${tag} </span>)`).join(""); // change the tag.
+	}
+
+}
+
+function ratingTemplate(rating) {
+	// begin building an html string using the ratings HTML written earlier as a model.
+	let markup = `<span role="img" aria-label="Rating: ${rating}out of 5 stars">` ; //input the rating variable into the template
+
+	for (let count = 1; count <= 5; count++)
+	 {
+        markup += count <= rating 
+		? `<span aria-hidden="true" class="icon-star">⭐</span>` 
+		: `<span aria-hidden="true" class="icon-star-empty">☆</span>`;
+    }
+    markup += `</span>`;
+    return markup;
+}
+
+function renderRecipes(recipeList) {
+    const recipeContainer = document.querySelector(".recipe-container"); //select .recipe-container
+    recipeContainer.innerHTML = recipeList.map(recipeTemplate).join('');
 }
