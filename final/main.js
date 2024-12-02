@@ -9,13 +9,61 @@ const elementMolecules = [
 
 console.log(elementMolecules);
 
+var selectedElements = [];
 // elements
-let hydrogen = document.getElementById('hydrogen-button');
-let oxygen = document.getElementById('oxygen-button');
-let carbon = document.getElementById('carbon-button');
-let nitrogen = document.getElementById('nitrogen-button');
-let chlorine = document.getElementById('chlorine-button');
-let sulfur = document.getElementById('sulfur-button');
+var hydrogen = document.getElementById('hydrogen-button');
+var oxygen = document.getElementById('oxygen-button');
+var carbon = document.getElementById('carbon-button');
+var nitrogen = document.getElementById('nitrogen-button');
+var chlorine = document.getElementById('chlorine-button');
+var sulfur = document.getElementById('sulfur-button');
 // molecule display
-let explore = document.getElementById('explore-button');
+var explore = document.getElementById('explore-button');
+
+hydrogen.addEventListener('click', handleElementClick); 
+oxygen.addEventListener('click', handleElementClick); 
+carbon.addEventListener('click', handleElementClick); 
+nitrogen.addEventListener('click', handleElementClick); 
+chlorine.addEventListener('click', handleElementClick); 
+sulfur.addEventListener('click', handleElementClick);
+
+
+
+function handleElementClick(event)  // this uses an event to see if the items in selected Elements are in a molecule, then returns it.
+    {
+    const elementSymbol = event.target.innerText.split(' ')[0];
+    if (selectedElements.length < 2) 
+        {
+            selectedElements.push(elementSymbol); 
+
+        } 
+        else 
+        { 
+            selectedElements = [elementSymbol]; 
+        } 
+        elementMoleculesQuery();
+    }
+
+
+function elementMoleculesQuery()
+    {
+        if (selectedElements.length === 2) 
+            { const foundMolecule = elementMolecules.find(pair => (pair.elements.includes(selectedElements[0]) && pair.elements.includes(selectedElements[1])) );
+                if (foundMolecule) 
+                    { 
+                        explore.innerText = `Molecule: ${foundMolecule.molecule}`;
+                        
+                    }
+                else 
+                { 
+                    explore.innerText = 'No molecule found!';
+                } 
+                selectedElements = []; //clear array
+            } 
+            
+        else 
+        { 
+            explore.innerText = 'Explore More Molecules';
+        }
+    }
 
