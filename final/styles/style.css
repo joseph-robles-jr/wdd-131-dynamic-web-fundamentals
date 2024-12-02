@@ -32,6 +32,7 @@ html, body {
 
 main {
     flex: 1;
+    animation: fadeIn 2s ease-in-out;
 }
 
 
@@ -80,6 +81,7 @@ main p
 {
     margin: 10px 0;
     line-height: 1.6;
+    
 }
 
 .text-center 
@@ -126,7 +128,7 @@ footer
 footer div 
 {
     margin: 0 auto;
-    animation: fadeIn 2s ease-in-out;
+    
 }
 
 footer a 
@@ -141,7 +143,7 @@ footer a
 footer a:hover 
 {
     color: var(--secondary-color);
-    text-decoration: underline;
+    text-decoration:dotted;
     transform: scale(1.1);
 }
 
@@ -151,7 +153,80 @@ footer p
     font-size: 16px;
 }
 
-@keyframes fadeIn {
+/* General button styles */ 
+.element-buttons 
+{ 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 10px; 
+}
+
+.element-buttons button 
+{ 
+    flex: 1 1 45%; /* Flex item that takes up nearly half the container */ 
+    padding: 20px; 
+    font-size: 18px;
+    cursor: pointer; 
+    border-radius: 5px; 
+    border: none; 
+    background-color: var(--button-color, #2980B9); /* Default to Button Blue */ 
+    color: var(--button-text-color, #FFFFFF); /* Default to White */ 
+    transition: background-color 0.3s, transform 0.3s; } 
+    
+.element-buttons button:hover 
+{ 
+    background-color: var(--button-hover-color, #1ABC9C); /* Default to Hover Mint Green */ 
+    transform: scale(1.05);
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.element-buttons button {
+    flex: 1 1 45%; /* Flex item that takes up nearly half the container */
+    padding: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--button-color, #2980B9); /* Default to Button Blue */
+    color: var(--button-text-color, #FFFFFF); /* Default to White */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.element-buttons button:hover {
+    background-color: var(--button-hover-color, #1ABC9C); /* Default to Hover Mint Green */
+    transform: scale(1.05);
+}
+
+/* Explore button styles */
+#explore-button {
+    flex: 1 1 45%; /* Takes up the remaining space */
+    padding: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--button-color, #2980B9); /* Default to Button Blue */
+    color: var(--button-text-color, #FFFFFF); /* Default to White */
+    transition: background-color 0.3s, transform 0.3s;
+    height:200px;
+}
+
+#explore-button:hover {
+    background-color: var(--button-hover-color, #1ABC9C); /* Default to Hover Mint Green */
+    transform: scale(1.05);
+}
+/* end of test */
+
+
+@keyframes fadeIn 
+{
     from {
         opacity: 0;
     }
