@@ -89,6 +89,18 @@ main p
     text-align: center;
 }
 
+/* Hero image styles */
+#hero {
+    width: 30%;
+    max-width: 6000px; /* Ensure the image does not exceed this width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any inline spacing around the image */
+    margin: 0 auto; /* Center the image horizontally */
+    border-radius: 50px; /* Optional: add a slight border radius for aesthetics */
+    margin-bottom: 20px;
+}
+
+
 #main-button
 {
     background-color: var(--button-color); 
