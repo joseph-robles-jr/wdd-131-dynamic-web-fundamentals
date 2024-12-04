@@ -65,7 +65,7 @@ function updateExploreButton() {
         }
         console.log("Found molecule:", foundMolecule);
     } else {
-        exploreButton.innerText = 'Explore More Molecules';
+        exploreButton.innerText = 'Explore More';
     }
 }
 
