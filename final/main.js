@@ -7,6 +7,7 @@ let sulfur = document.getElementById('sulfur-button');
 let exploreButton = document.getElementById('explore-button');
 
 let selectedElements = [];
+let matchedMolecules =[];
 const elementMolecules = [
     { elements: ["H", "O"], molecule: "H₂O Water" }, // Water 
     { elements: ["H", "C"], molecule: "CH₄ Methane" }, // Methane 
@@ -24,8 +25,6 @@ const elementMolecules = [
     { elements: ["N", "S"], molecule: "NS Nitrosyl Sulfide " }, // Nitrosyl Sulfide 
     { elements: ["Cl", "S"], molecule: "SCl₂ Sulfur Dichloride" }, // Sulfur Dichloride
 ];
-
-
 
 hydrogen.addEventListener('click', handleElementClick);
 oxygen.addEventListener('click', handleElementClick);
@@ -53,19 +52,45 @@ function handleElementClick(event) {
     updateExploreButton();
 }
 
+// function OLD_updateExploreButton() {
+//     if (selectedElements.length === 2) {
+//         const foundMolecule = elementMolecules.find(pair => 
+//             (pair.elements.includes(selectedElements[0]) && pair.elements.includes(selectedElements[1]))
+//         );
+//         if (foundMolecule) {
+//             exploreButton.innerText = `Molecule: ${foundMolecule.molecule}`;
+//         } else {
+//             exploreButton.innerText = 'No molecule found!';
+//         }
+//         console.log("Found molecule:", foundMolecule);
+//     } else {
+//         exploreButton.innerText = 'Explore More';
+//     }
+ 
+// }
+
+
 function updateExploreButton() {
     if (selectedElements.length === 2) {
-        const foundMolecule = elementMolecules.find(pair => 
-            (pair.elements.includes(selectedElements[0]) && pair.elements.includes(selectedElements[1]))
-        );
-        if (foundMolecule) {
-            exploreButton.innerText = `Molecule: ${foundMolecule.molecule}`;
+        matchedMolecules = []; //clears array
+
+        elementMolecules.forEach(item => {
+            if (item.elements.includes(selectedElements[0]) && item.elements.includes(selectedElements[1])) {
+                matchedMolecules.push(item); 
+            }
+        });
+
+        if (matchedMolecules.length > 0) {
+            exploreButton.innerText = `Molecule: ${matchedMolecules[0].molecule}`;
         } else {
             exploreButton.innerText = 'No molecule found!';
         }
-        console.log("Found molecule:", foundMolecule);
+
+        console.log("Found molecule(s):", matchedMolecules);
     } else {
         exploreButton.innerText = 'Explore More';
     }
 }
+
+
 
