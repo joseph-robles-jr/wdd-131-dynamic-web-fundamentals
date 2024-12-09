@@ -6,9 +6,9 @@
     --secondary-color: #2980B9;
     --accent1-color: #ECF0F1;
     --accent2-color: #BDC3C7;
-    --button-color: #2980B9;
-    --button-hover-color: #1ABC9C;
-    --button-text-color:var(--accent1-color)
+    --button-color: rgb(23, 78, 117);
+    --button-hover-color: #2C3E50;
+    --button-text-color:white;
 }
 
 /* General styles */
@@ -105,7 +105,7 @@ main p
 {
     background-color: var(--button-color); 
     /* color: var(--button-text-color);  */
-    color: white;
+    color: var(--button-text-color);
     border: none; padding: 10px 20px; 
     font-size: 16px; 
     font-weight: 600;
@@ -186,7 +186,7 @@ footer p
     border-radius: 5px; 
     border: none; 
     background-color: var(--button-color, #2980B9); /* Default to Button Blue */ 
-    color: var(--button-text-color, #FFFFFF); /* Default to White */ 
+    color: var(--button-text-color); /* Default to White */ 
     transition: background-color 0.3s, transform 0.3s; } 
     
 .element-buttons button:hover 
@@ -214,7 +214,7 @@ footer p
     border-radius: 5px;
     border: none;
     background-color: var(--button-color, #2980B9); /* Default to Button Blue */
-    color: var(--button-text-color, #FFFFFF); /* Default to White */
+    color: var(--button-text-color); /* Default to White */
     transition: background-color 0.3s, transform 0.3s;
 }
 
